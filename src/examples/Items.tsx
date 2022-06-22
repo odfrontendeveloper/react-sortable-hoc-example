@@ -3,11 +3,11 @@ import { GiHamburgerMenu } from 'react-icons/gi'
 import {
     SortableContainer,
     SortableElement,
-    arrayMove,
     SortableContainerProps,
     SortableElementProps,
     SortableHandle,
 } from 'react-sortable-hoc'
+import { arrayMoveImmutable } from 'array-move'
 import './styles.scss'
 
 interface ISortableHandleElement {
@@ -47,7 +47,7 @@ const Items = (): JSX.Element => {
     const [state, setState] = useState<string[]>(['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5', 'Item 6'])
 
     const onSortEnd = ({ oldIndex, newIndex }: { oldIndex: number; newIndex: number }): void => {
-        setState(arrayMove(state, oldIndex, newIndex))
+        setState(arrayMoveImmutable(state, oldIndex, newIndex))
     }
 
     return (
