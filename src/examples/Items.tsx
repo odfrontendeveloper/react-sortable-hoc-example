@@ -27,9 +27,7 @@ interface ISortableContainer extends SortableContainerProps {
 
 const DndTrigger: React.ComponentClass<ISortableHandleElement, any> = SortableHandle(
     ({ children, className }: { children: React.ReactNode; className: string }) => (
-        <div className={className || ''}>
-            {children}
-        </div>
+        <div className={className || ''}>{children}</div>
     )
 )
 

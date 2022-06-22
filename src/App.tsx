@@ -1,13 +1,13 @@
-import React from 'react';
-import './App.scss';
-import Items from './examples/Items';
+import React from 'react'
+import './App.scss'
+import Items from './examples/Items'
 
-function App() {
-  return (
-    <div className="App">
-      <Items />
-    </div>
-  );
+const App = () => {
+    return (
+        <div className="App">
+            <Items />
+        </div>
+    )
 }
 
-export default App;
+export default App
